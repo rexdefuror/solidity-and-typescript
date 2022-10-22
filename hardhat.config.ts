@@ -19,7 +19,7 @@ const rinkebyAccount: string = process.env.RINKEBY_PRIVATE_KEY ?? "";
 const mainnetAccount: string = process.env.MAINNET_PRIVATE_KEY ?? "";
 
 const config: HardhatUserConfig = {
-    solidity: "0.8.16",
+    solidity: "0.8.17",
     networks: {
         rinkeby: {
             url: process.env.RINKEBY_RPC,
@@ -33,8 +33,7 @@ const config: HardhatUserConfig = {
     gasReporter: {
         currency: "USD",
         token: "ETH",
-        gasPriceApi:
-            "https://api.etherscan.io/api?module=proxy&action=eth_gasPrice",
+        gasPriceApi: "https://api.etherscan.io/api?module=proxy&action=eth_gasPrice",
         coinmarketcap: process.env.COINMARKETCAP_API_KEY,
         showTimeSpent: true
     },
